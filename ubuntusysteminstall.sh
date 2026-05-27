@@ -6,9 +6,8 @@
 #Defragment system to prevent system file corruption
 #Restart your computer to finish updates.
 
-sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo apt update
-sudo apt install ibus-bamboo ibus bleachbit kazam python3-pip yt-dlp neofetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk
+sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp neofetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak install flathub org.dupot.easyflatpak
