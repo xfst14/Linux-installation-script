@@ -7,7 +7,7 @@
 #Autopurge unnecessary packages
 #Defragment system to prevent system file corruption
 
-
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo apt update
 
 # Removing unnecessary packages from the system
@@ -29,7 +29,7 @@ sudo apt autopurge plasma-discover
 sudo apt autopurge ubuntu-report whoopsie
 
 #Installing essential packages for the system, for a more complete experience (for items missing due to removal, you need to install the Flathub variant of your choice via the newly installed EasyFlatpak store!)
-sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp neofetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk xwayland
+sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk xwayland
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak install flathub org.dupot.easyflatpak
