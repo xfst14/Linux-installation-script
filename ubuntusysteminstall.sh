@@ -24,7 +24,7 @@ sudo apt autopurge mintinstall
 sudo apt autopurge plasma-discover
 sudo apt autopurge ubuntu-report whoopsie
 
-sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp neofetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk
+sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp neofetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk xwayland
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak install flathub org.dupot.easyflatpak
