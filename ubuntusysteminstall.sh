@@ -7,12 +7,6 @@
 #Restart your computer to finish updates.
 
 sudo apt update
-sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp neofetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-flatpak install flathub org.dupot.easyflatpak
-
-
 
 sudo apt autopurge gnome-keyring libpam-gnome-keyring gstreamer1.0-vaapi
 sudo apt autopurge firefox thunderbird libreoffice-common
@@ -29,6 +23,12 @@ sudo apt autopurge imagemagick-6-common
 sudo apt autopurge mintinstall
 sudo apt autopurge plasma-discover
 sudo apt autopurge ubuntu-report whoopsie
+
+sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp neofetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub org.dupot.easyflatpak
+
 sudo apt upgrade
 sudo apt autopurge
 sudo e4defrag /home
