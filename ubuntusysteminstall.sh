@@ -39,5 +39,5 @@ flatpak install flathub io.github.obiwankennedy.HotShots
 # Upgrade the system and defragmenting the system to increase performance, then refreshing the system
 sudo apt upgrade
 sudo apt autopurge
-sudo e4defrag /home
+sudo fstrim -av
 
