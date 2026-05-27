@@ -25,7 +25,7 @@ sudo apt autopurge kwrite gwenview kontact kclock kate kde-spectacle
 sudo apt autopurge snapd
 sudo apt autopurge imagemagick-6-common
 sudo apt autopurge mintinstall
-sudo apt autopurge plasma-discover ubuntu-mate-welcome
+sudo apt autopurge plasma-discover ubuntu-mate-welcome lite-software
 sudo apt autopurge ubuntu-report whoopsie
 
 #Installing essential packages for the system, for a more complete experience (for items missing due to removal, you need to install the Flathub variant of your choice via the newly installed EasyFlatpak store!)
