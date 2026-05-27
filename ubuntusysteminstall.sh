@@ -33,4 +33,4 @@ sudo apt autopurge ubuntu-report whoopsie
 sudo apt upgrade
 sudo apt autopurge
 sudo e4defrag /home
-init 6
+
