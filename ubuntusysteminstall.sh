@@ -8,7 +8,10 @@
 
 sudo apt update
 
-sudo apt autopurge gnome-keyring libpam-gnome-keyring gstreamer1.0-vaapi
+sudo dpkg --remove --force-depends gstreamer1.0-vaapi
+sudo apt-mark manual plasma-desktop kwin-x11 kwin-wayland plasma-workspace neon-settings-konsole
+sudo apt -f install
+sudo apt autopurge gnome-keyring libpam-gnome-keyring 
 sudo apt autopurge firefox thunderbird libreoffice-common
 sudo apt autopurge timeshift celluloid rhythmbox
 sudo apt autopurge libreoffice-uiconfig-common libreoffice-uiconfig-writer libreoffice-uiconfig-calc libreoffice-uiconfig-impress libreoffice-uiconfig-draw
