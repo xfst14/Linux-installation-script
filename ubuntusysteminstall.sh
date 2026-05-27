@@ -8,14 +8,12 @@
 
 sudo apt update
 
-sudo dpkg --remove --force-depends gstreamer1.0-vaapi
-sudo apt-mark manual plasma-desktop kwin-x11 kwin-wayland plasma-workspace neon-settings-konsole
-sudo apt -f install
+sudo apt autopurge kasumi okular
 sudo apt autopurge gnome-keyring libpam-gnome-keyring 
 sudo apt autopurge firefox thunderbird libreoffice-common
 sudo apt autopurge timeshift celluloid rhythmbox
 sudo apt autopurge libreoffice-uiconfig-common libreoffice-uiconfig-writer libreoffice-uiconfig-calc libreoffice-uiconfig-impress libreoffice-uiconfig-draw
-sudo apt autopurge gnome-clocks gnome-calendar gnome-calculator gnome-text-editor eog
+sudo apt autopurge gnome-clocks gnome-calendar gnome-calculator gnome-text-editor eog gnome-screenshot
 sudo apt autopurge evince
 sudo apt autopurge xviewer xreader xed
 sudo apt autopurge hypnotix
@@ -31,6 +29,7 @@ sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp neofetc
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak install flathub org.dupot.easyflatpak
+flatpak install flathub io.github.obiwankennedy.HotShots
 
 sudo apt upgrade
 sudo apt autopurge
