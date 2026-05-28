@@ -11,7 +11,7 @@
 sudo dnf update
 
 # Removing unnecessary packages from the system
-sudo dnf autoremove kasumi okular
+sudo dnf autoremove kasumi okular kwalletmanager5
 sudo dnf autoremove gnome-keyring libpam-gnome-keyring 
 sudo dnf autoremove firefox thunderbird libreoffice-common
 sudo dnf autoremove timeshift celluloid rhythmbox
