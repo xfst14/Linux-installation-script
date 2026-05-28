@@ -32,25 +32,12 @@ sudo apt autopurge ubuntu-report whoopsie
 sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak software-properties-common software-properties-gtk
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# timeout 5 dolphin &>/dev/null &
-# DOLPHIN_PID=$!
-# sleep 3
-# kill $DOLPHIN_PID 2>/dev/null
-# wait $DOLPHIN_PID 2>/dev/null
-# DOLPHIN_EXIT=$?
 
-# if [ $DOLPHIN_EXIT -ne 0 ]; then
-#     echo "Dolphin failed to launch, removing and installing Flatpak version instead..."
-#     sudo apt autopurge -y dolphin
-#     flatpak install -y flathub org.kde.dolphin
-# else
-#     echo "✅ Dolphin (apt) is working correctly."
-# fi
 
 sudo apt update
 sudo apt --fix-broken install
 sudo apt full-upgrade
-sudo apt install --reinstall libqt6qml6 libqt6core6 dolphin
+sudo apt install --reinstall dolphin
 
 flatpak install flathub org.dupot.easyflatpak
 flatpak install flathub io.github.obiwankennedy.HotShots
