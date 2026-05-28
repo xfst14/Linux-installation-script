@@ -11,7 +11,7 @@ sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo apt update
 
 # Removing unnecessary packages from the system
-sudo apt autopurge kasumi okular kwalletmanager5
+sudo apt autopurge kasumi okular 
 sudo apt autopurge gnome-keyring libpam-gnome-keyring 
 sudo apt autopurge firefox thunderbird libreoffice-common
 sudo apt autopurge timeshift celluloid rhythmbox
