@@ -39,6 +39,21 @@ flatpak install flathub io.github.obiwankennedy.HotShots
 gsettings set org.gnome.shell disable-extension-version-validation true
 
 
+timeout 5 dolphin &>/dev/null &
+DOLPHIN_PID=$!
+sleep 3
+kill $DOLPHIN_PID 2>/dev/null
+wait $DOLPHIN_PID 2>/dev/null
+DOLPHIN_EXIT=$?
+
+if [ $DOLPHIN_EXIT -ne 0 ]; then
+    echo "Dolphin failed to launch, removing and installing Flatpak version instead..."
+    sudo apt autopurge -y dolphin
+    flatpak install -y flathub org.kde.dolphin
+else
+    echo "✅ Dolphin (apt) is working correctly."
+fi
+
 # Upgrade the system and defragmenting the system to increase performance, then refreshing the system
 sudo apt upgrade
 sudo apt autopurge
