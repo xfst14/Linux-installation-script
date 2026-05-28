@@ -32,13 +32,6 @@ sudo apt autopurge ubuntu-report whoopsie
 sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak xserver-xorg-core x11-apps x11-utils xorg software-properties-common software-properties-gtk xwayland
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub org.dupot.easyflatpak
-flatpak install flathub io.github.obiwankennedy.HotShots
-
-#Force Wayland to use Kazam to take screenshots of your computer
-gsettings set org.gnome.shell disable-extension-version-validation true
-
-
 timeout 5 dolphin &>/dev/null &
 DOLPHIN_PID=$!
 sleep 3
@@ -53,6 +46,12 @@ if [ $DOLPHIN_EXIT -ne 0 ]; then
 else
     echo "✅ Dolphin (apt) is working correctly."
 fi
+
+flatpak install flathub org.dupot.easyflatpak
+flatpak install flathub io.github.obiwankennedy.HotShots
+
+#Force Wayland to use Kazam to take screenshots of your computer
+gsettings set org.gnome.shell disable-extension-version-validation true
 
 # Upgrade the system and defragmenting the system to increase performance, then refreshing the system
 sudo apt upgrade
