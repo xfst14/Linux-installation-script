@@ -16,7 +16,7 @@ sudo apt autopurge gnome-keyring libpam-gnome-keyring
 sudo apt autopurge firefox thunderbird libreoffice-common
 sudo apt autopurge timeshift celluloid rhythmbox
 sudo apt autopurge libreoffice-uiconfig-common libreoffice-uiconfig-writer libreoffice-uiconfig-calc libreoffice-uiconfig-impress libreoffice-uiconfig-draw
-sudo apt autopurge gnome-clocks gnome-calendar gnome-calculator gnome-text-editor eog gnome-screenshot
+sudo apt autopurge gnome-clocks gnome-calendar gnome-calculator gnome-text-editor eog gnome-screenshot gnome-software
 sudo apt autopurge evince
 sudo apt autopurge xviewer xreader xed
 sudo apt autopurge hypnotix
