@@ -58,7 +58,6 @@ flatpak install flathub io.github.obiwankennedy.HotShots
 #Force Wayland to use Kazam to take screenshots of your computer
 gsettings set org.gnome.shell disable-extension-version-validation true
 
-# Upgrade the system and defragmenting the system to increase performance, then refreshing the system
-sudo apt upgrade
+# Defragmenting the system to increase performance, then refreshing the system
 sudo apt autopurge
 sudo fstrim -av
