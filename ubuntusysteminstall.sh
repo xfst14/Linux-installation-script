@@ -13,8 +13,8 @@ set -euo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 
-sudo apt update -y
-sudo apt install software-properties-common software-properties-gtk curl -y
+sudo apt-get update --fix-missing -y
+sudo apt-get install software-properties-common software-properties-gtk curl -y
 
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
 sudo apt update -y
