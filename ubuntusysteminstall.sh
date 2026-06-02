@@ -11,6 +11,8 @@
 
 set -euo pipefail
 
+export DEBIAN_FRONTEND=noninteractive
+
 sudo apt update -y
 sudo apt install software-properties-common software-properties-gtk curl -y
 
