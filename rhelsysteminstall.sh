@@ -12,20 +12,20 @@
 sudo dnf update -y
 
 # Removing unnecessary packages from the system
-sudo dnf autoremove kasumi okular -y
-sudo dnf autoremove gnome-keyring libpam-gnome-keyring -y
-sudo dnf autoremove firefox thunderbird libreoffice-common -y
-sudo dnf autoremove timeshift celluloid rhythmbox -y
-sudo dnf autoremove libreoffice-uiconfig-common libreoffice-uiconfig-writer libreoffice-uiconfig-calc libreoffice-uiconfig-impress libreoffice-uiconfig-draw -y
-sudo dnf autoremove gnome-clocks gnome-calendar gnome-calculator gnome-text-editor eog gnome-screenshot gnome-software flatpak -y
-sudo dnf autoremove evince -y
-sudo dnf autoremove xviewer xreader xed -y
-sudo dnf autoremove hypnotix -y
-sudo dnf autoremove drawing -y
-sudo dnf autoremove kwrite gwenview kontact kclock kate kde-spectacle -y
-sudo dnf autoremove imagemagick-6-common -y
-sudo dnf autoremove plasma-discover -y
-sudo dnf autoremove abrt -y
+sudo dnf remove kasumi okular -y
+sudo dnf remove gnome-keyring libpam-gnome-keyring -y
+sudo dnf remove firefox thunderbird libreoffice-common -y
+sudo dnf remove timeshift celluloid rhythmbox -y
+sudo dnf remove libreoffice-uiconfig-common libreoffice-uiconfig-writer libreoffice-uiconfig-calc libreoffice-uiconfig-impress libreoffice-uiconfig-draw -y
+sudo dnf remove gnome-clocks gnome-calendar gnome-calculator gnome-text-editor eog gnome-screenshot gnome-software flatpak -y
+sudo dnf remove evince -y
+sudo dnf remove xviewer xreader xed -y
+sudo dnf remove hypnotix -y
+sudo dnf remove drawing -y
+sudo dnf remove kwrite gwenview kontact kclock kate kde-spectacle -y
+sudo dnf remove imagemagick-6-common -y
+sudo dnf remove plasma-discover -y
+sudo dnf remove abrt -y
 
 #Installing essential packages for the system, for a more complete experience (for items missing due to removal, you need to install the Flathub variant of your choice via the newly installed EasyFlatpak store!)
 sudo dnf install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak  -y
