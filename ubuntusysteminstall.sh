@@ -7,21 +7,12 @@
 #Autopurge unnecessary packages
 #Defragment system to prevent system file corruption
 
-#!/usr/env/bin bash
 
-set -u
-echo $MY_VAR
-cat something | grep "pattern" | some-command
 
-set -euo pipefail
-
-export DEBIAN_FRONTEND=noninteractive
-
-sudo apt-get update --fix-missing -y
-sudo apt-get install -y software-properties-common software-properties-gtk curl
+sudo apt update -y
 
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
-sudo apt-get update --fix-missing -y
+sudo apt update  -y
 
 # Removing unnecessary packages from the system
 sudo apt autopurge kasumi okular -y
@@ -42,17 +33,11 @@ sudo apt autopurge plasma-discover ubuntu-mate-welcome lite-software -y
 sudo apt autopurge ubuntu-report whoopsie -y
 
 #Installing essential packages for the system, for a more complete experience (for items missing due to removal, you need to install the Flathub variant of your choice via the newly installed EasyFlatpak store!)
-sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak -y
+sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak software-properties-common software-properties-gtk curl -y
 
-
-if command -v flatpak >/dev/null; then
-  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-  flatpak install -y flathub org.dupot.easyflatpak
-  flatpak install -y flathub io.github.obiwankennedy.HotShots
-else
-  echo "Flatpak installation failed, skipping app installs."
-fi
-
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub org.dupot.easyflatpak
+flatpak install -y flathub io.github.obiwankennedy.HotShots
 
 sudo apt update -y
 sudo apt --fix-broken install -y
@@ -63,10 +48,5 @@ gsettings set org.gnome.shell disable-extension-version-validation true
 
 # Defragmenting the system to increase performance, then refreshing the system
 sudo apt autopurge -y
-
-if command -v e4defrag >/dev/null; then
-  sudo e4defrag /
-else
-  echo "e4defrag not found, skipping."
-fi
+sudo e4defrag /home
 
