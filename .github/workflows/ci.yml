@@ -10,11 +10,11 @@ jobs:
         include:
           - distro: "ubuntu:latest"
             script: "ubuntusysteminstall.sh"
-            pkg-manager: "apt-get"
+            pkg_manager: "apt-get"
             
           - distro: "fedora:latest"
             script: "rhelsysteminstall.sh"
-            pkg-manager: "dnf"
+            pkg_manager: "dnf"
 
     steps:
       - name: Checkout code
@@ -24,14 +24,14 @@ jobs:
 
         run: |
           docker run --rm \
-            -v $ {{ github.workspace }}:/workspace \
+            -v ${{ github.workspace }}:/workspace \
             -w /workspace \
             ${{ matrix.distro }} \
             bash -c "
 
-              if ['${{ matrix.pkg-manager }} ' = 'apt-get' ]; then
+              if [ '${{ matrix.pkg_manager }}' = 'apt-get' ]; then
                 apt-get update && apt-get install -y sudo
-              elif ['${{ matrix.pkg-manager }} ' = 'dnf' ]; then
+              elif [ '${{ matrix.pkg_manager }}' = 'dnf' ]; then
                 dnf install -y sudo
               fi
 
