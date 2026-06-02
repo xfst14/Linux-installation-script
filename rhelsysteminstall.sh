@@ -29,10 +29,14 @@ sudo dnf remove abrt -y
 
 #Installing essential packages for the system, for a more complete experience (for items missing due to removal, you need to install the Flathub variant of your choice via the newly installed EasyFlatpak store!)
 sudo dnf install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak  -y
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-flatpak install -y flathub org.dupot.easyflatpak
-flatpak install -y flathub io.github.obiwankennedy.HotShots
+if command -v flatpak >/dev/null; then
+  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  flatpak install -y flathub org.dupot.easyflatpak
+  flatpak install -y flathub io.github.obiwankennedy.HotShots
+else
+  echo "Flatpak installation failed, skipping app installs."
+fi
 
 #Force Wayland to use Kazam to take screenshots of your computer
 gsettings set org.gnome.shell disable-extension-version-validation true
@@ -41,4 +45,9 @@ gsettings set org.gnome.shell disable-extension-version-validation true
 # Upgrade the system and defragmenting the system to increase performance, then refreshing the system
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-sudo e4defrag /home 
+
+if command -v e4defrag >/dev/null; then
+  sudo e4defrag /
+else
+  echo "e4defrag not found, skipping."
+fi
