@@ -9,15 +9,19 @@
 
 #!/usr/env/bin bash
 
+set -u
+echo $MY_VAR
+cat something | grep "pattern" | some-command
+
 set -euo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update --fix-missing -y
-sudo apt-get install software-properties-common software-properties-gtk curl -y
+sudo apt-get install -y software-properties-common software-properties-gtk curl
 
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
-sudo apt update -y
+sudo apt-get update --fix-missing -y
 
 # Removing unnecessary packages from the system
 sudo apt autopurge kasumi okular -y
