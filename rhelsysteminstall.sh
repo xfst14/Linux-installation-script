@@ -7,6 +7,7 @@
 #autoremove unnecessary packages
 #Defragment system to prevent system file corruption
 
+#!/usr/bin/env bash
 
 sudo dnf update -y
 
@@ -27,7 +28,7 @@ sudo dnf autoremove plasma-discover -y
 sudo dnf autoremove abrt -y
 
 #Installing essential packages for the system, for a more complete experience (for items missing due to removal, you need to install the Flathub variant of your choice via the newly installed EasyFlatpak store!)
-sudo dnf install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak software-properties-common software-properties-gtk -y
+sudo dnf install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak  -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak install -y flathub org.dupot.easyflatpak
