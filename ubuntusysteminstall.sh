@@ -7,12 +7,8 @@
 #Autopurge unnecessary packages
 #Defragment system to prevent system file corruption
 
-
-
-sudo apt update -y
-
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
-sudo add-apt-repository universe -y
+sudo add-apt-repository universe multiverse -y
 sudo apt update  -y
 
 # Removing unnecessary packages from the system
