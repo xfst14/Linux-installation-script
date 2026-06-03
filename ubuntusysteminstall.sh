@@ -21,7 +21,7 @@ sudo apt autopurge firefox thunderbird libreoffice-common -y
 sudo apt autopurge timeshift celluloid rhythmbox -y
 sudo apt autopurge libreoffice-uiconfig-common libreoffice-uiconfig-writer libreoffice-uiconfig-calc libreoffice-uiconfig-impress libreoffice-uiconfig-draw -y
 sudo apt autopurge gnome-clocks gnome-calendar gnome-calculator gnome-text-editor eog gnome-screenshot gnome-software -y
-sudo apt autopurge evince -y
+sudo apt autopurge evince loupe papers -y
 sudo apt autopurge xviewer xreader xed -y
 sudo apt autopurge hypnotix -y
 sudo apt autopurge drawing -y
