@@ -32,6 +32,7 @@ sudo dnf install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfet
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub org.dupot.easyflatpak
+flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub io.github.obiwankennedy.HotShots
 
 #Force Wayland to use Kazam to take screenshots of your computer
