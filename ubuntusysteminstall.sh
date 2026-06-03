@@ -7,9 +7,12 @@
 #Autopurge unnecessary packages
 #Defragment system to prevent system file corruption
 
-sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
 sudo add-apt-repository universe multiverse -y
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
 sudo apt update  -y
+
+#Installing essential packages for the system, for a more complete experience (for items missing due to removal, you need to install the Flathub variant of your choice via the newly installed EasyFlatpak store!)
+sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak software-properties-common software-properties-gtk curl -y
 
 # Removing unnecessary packages from the system
 sudo apt autopurge kasumi okular -y
@@ -28,9 +31,6 @@ sudo apt autopurge imagemagick-6-common -y
 sudo apt autopurge mintinstall -y
 sudo apt autopurge plasma-discover ubuntu-mate-welcome lite-software -y
 sudo apt autopurge ubuntu-report whoopsie -y
-
-#Installing essential packages for the system, for a more complete experience (for items missing due to removal, you need to install the Flathub variant of your choice via the newly installed EasyFlatpak store!)
-sudo apt install fcitx5 fcitx5-unikey bleachbit kazam python3-pip yt-dlp fastfetch spice-vdagent flatpak software-properties-common software-properties-gtk curl -y
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub org.dupot.easyflatpak
