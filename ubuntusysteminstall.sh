@@ -46,5 +46,4 @@ gsettings set org.gnome.shell disable-extension-version-validation true
 
 # Defragmenting the system to increase performance, then refreshing the system
 sudo apt autopurge -y
-sudo e4defrag /home
 
