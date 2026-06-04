@@ -1,5 +1,8 @@
 # Linux-installation-script
 This is a simple collection of scripts for you to fully set up Linux in one go, all with a simple execution (which includes scripts for Debian/Ubuntu-based, RHEL-based, and Arch-based). It is a highly beneficial tool for everyone, especially new users who are trying to setup Linux desktop for the first time.
+
+<img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/2778cdcb-02dd-4873-b372-257ac656dd52" />
+
 # How can you use this script?
 The procedures is very simple.
 First, allow this script to be executed by simply heading to your folder containing this script you just extracted, then use the following command to extract one of the following scripts (in this case, ubuntusysteminstall.sh):
