@@ -30,7 +30,7 @@ sudo apt autopurge snapd -y
 sudo apt autopurge imagemagick-6-common -y
 sudo apt autopurge mintinstall -y
 sudo apt autopurge plasma-discover ubuntu-mate-welcome lite-software -y
-sudo apt autopurge ubuntu-report whoopsie -y
+sudo apt autopurge ubuntu-report whoopsie apport popularity-contest -y
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub org.dupot.easyflatpak
