@@ -34,6 +34,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak install -y flathub org.dupot.easyflatpak
 flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub io.github.obiwankennedy.HotShots
+flatpak remove --unused -y
 
 #Force Wayland to use Kazam to take screenshots of your computer
 gsettings set org.gnome.shell disable-extension-version-validation true
@@ -42,4 +43,4 @@ gsettings set org.gnome.shell disable-extension-version-validation true
 # Upgrade the system and defragmenting the system to increase performance, then refreshing the system
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-sudo e4defrag /home
+
