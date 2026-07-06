@@ -36,6 +36,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak install -y flathub org.dupot.easyflatpak
 flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub io.github.obiwankennedy.HotShots
+flatpak remove --unused -y
 
 sudo apt update -y
 sudo apt --fix-broken install -y
